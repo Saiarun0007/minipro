@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>minproj</title>
+    <link rel="stylesheet" href="minproj.css">
+
+</head>
+
+<body>
+    <h1>APPLICATION FOR THE AWARD OF THE BEST OUTGOING STUDENT()</h1>
+    <hr>
+    <form action="">
+        <div>
+            <label for="name">Name of the Candidate:</label>
+            <input type="text" id="name" name="name" placeholder="name as per your ssc">
+        </div>
+        <div>
+            <label for="dept">Department:</label>
+            <input type="radio" name="dept" id="CIVIL" value="CIVIL">
+            <label for="CIVIL">CIVIL</label>
+            <input type="radio" name="dept" id="EEE" value="EEE">
+            <label for="EEE">EEE</label>
+            <input type="radio" name="dept" id="MECH" value="MECH">
+            <label for="MECH">ME</label>
+            <input type="radio" name="dept" id="ECE" value="ECE">
+            <label for="ECE">ECE</label>
+            <input type="radio" name="dept" id="CSE" value="CSE">
+            <label for="CSE">CSE</label>
+            <input type="radio" name="dept" id="CST" value="CST">
+            <label for="CST">CST</label>
+            <input type="radio" name="dept" id="ECT" value="ECT">
+            <label for="ECT">ECT</label>
+            <input type="radio" name="dept" id="CAI" value="CAI">
+            <label for="CAI">CSE(AI)</label>
+            <input type="radio" name="dept" id="AIML" value="AIML">
+            <label for="AIML">AIML</label>
+
+
+
+        </div>
+        <div>
+            <label for="rollno">Roll no:</label>
+            <input type="text" placeholder="21A81A...." name="rollno" id="rollno">
+        </div>
+        <div class="imgblock">
+
+            <div class="upload-block">
+                <label for="image-upload">Click here to upload an image</label>
+                <input type="file" id="image-upload" accept="image/*">
+                <img id="preview" src="#" alt="Preview Image">
+            </div>
+
+            <script>
+                const input = document.getElementById('image-upload');
+                const preview = document.getElementById('preview');
+
+                input.addEventListener('change', function (e) {
+                    const file = e.target.files[0];
+                    const reader = new FileReader();
+
+                    reader.onload = function (e) {
+                        preview.src = e.target.result;
+                    };
+
+                    reader.readAsDataURL(file);
+                });
+            </script>
+            <div class="aboutme">
+                <label for="txt">About Me</label>
+                <textarea name="txt" id="txt" cols="40" rows="10"
+                    placeholder="(not more than two to three lines)"></textarea>
+            </div>
+        </div>
+        <h2>A) Academices(Maximum 60 marks)</h2>
+        <hr>
+        <table>
+            <thead>
+                <tr>
+                    <th>S.NO</th>
+                    <th>Semester</th>
+                    <th>SGPA</th>
+                    <th>CGPA</th>
+                </tr>
+            </thead>
+
+            <tr>
+                <td>1.</td>
+                <td>&#8544; Semester</td>
+                <td><input type="number"></td>
+            </tr>
+            <tr>
+                <td>2.</td>
+                <td>&#8545; Semester</td>
+                <td><input type="number"></td>
+            </tr>
+            <tr>
+                <td>3.</td>
+                <td>&#8546; Semester</td>
+                <td><input type="number"></td>
+            </tr>
+            <tr>
+                <td>4.</td>
+                <td>&#8547; Semester</td>
+                <td><input type="number"></td>
+            </tr>
+            <tr>
+                <td>5.</td>
+                <td>&#8548; Semester</td>
+                <td><input type="number"></td>
+            </tr>
+            <tr>
+                <td>6.</td>
+                <td>&#8549; Semester</td>
+                <td><input type="number"></td>
+            </tr>
+            <tr>
+                <td>7.</td>
+                <td>&#8550; Semester</td>
+                <td><input type="number"></td>
+            </tr>
+            <tr>
+                <td>8.</td>
+                <td for="marks">&#8551; Semester</td>
+                <td><input type="number" id="marks"></td>
+            </tr>
+        </table>
+        <div>
+            <label for="">Marks *out of 60 for the Award:</label><br>
+            <lable>(Note:Marks* to be awarded by the committee)</lable>
+            <input type="text">
+        </div>
+        <div>
+            <label for="">Normaized Marks =</label><br>
+            <lable></lable>
+            <input type="text">
+        </div>
+        <h3>Qualification in GATE/CAT/MAT/GRE etc.(Maximum 05 Marks)</h3>
+        <div>
+            <label for="">Score:</label>
+            <input type="text">
+            <label for="">Rank:</label>
+            <input type="text">
+        </div>
+        <h2>B. Co-curricular Activites(Maximum 15Marks*)</h2>
+        <hr>
+        <p>[Conference,Journal,Paper/Poster Presentation,Technical Quiz,Hackathon,Product Design etc.]</p>
+        <h3>
+            <section>a. Paper Publications(3 marks per paper)</section>
+        </h3>
+        <div>
+            <ul>
+                <li>state your status for each paper-First author or second author or third author</li>
+                <li>Only Pubications in reputed journals will be considered</li>
+            </ul>
+        </div>
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name of the Journal/Conference</th>
+                        <th>Title of the paper and Authors</th>
+                        <th>marks</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><textarea name="" id="" cols="10" rows="1"></textarea></td>
+                        <td><textarea name="" id="" cols="10" rows="1"></textarea></td>
+                        <td><textarea name="" id="" cols="10" rows="1"></textarea></td>
+
+                    </tr>
+                    <tr>
+                        <td><textarea name="" id="" cols="10" rows="1"></textarea></td>
+                        <td><textarea name="" id="" cols="10" rows="1"></textarea></td>
+                        <td><textarea name="" id="" cols="10" rows="1"></textarea></td>
+
+                    </tr>
+                    <tr>
+                        <td><textarea name="" id="" cols="10" rows="1"></textarea></td>
+                        <td><textarea name="" id="" cols="10" rows="1"></textarea></td>
+                        <td><textarea name="" id="" cols="10" rows="1"></textarea></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div>
+            <h3>b. Participation in Co-curricular activites(2 marks per event)</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name of the Event</th>
+                        <th>Place of Event</th>
+                        <th>Details of the Event</th>
+                        <th>Marks</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><textarea name="" id="" cols="10" rows="1"></textarea></td>
+                        <td><textarea name="" id="" cols="10" rows="1"></textarea></td>
+                        <td><textarea name="" id="" cols="10" rows="1"></textarea></td>
+                        <td><textarea name="" id="" cols="10" rows="1"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td><textarea name="" id="" cols="10" rows="1"></textarea></td>
+                        <td><textarea name="" id="" cols="10" rows="1"></textarea></td>
+                        <td><textarea name="" id="" cols="10" rows="1"></textarea></td>
+                        <td><textarea name="" id="" cols="10" rows="1"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td><textarea name="" id="" cols="10" rows="1"></textarea></td>
+                        <td><textarea name="" id="" cols="10" rows="1"></textarea></td>
+                        <td><textarea name="" id="" cols="10" rows="1"></textarea></td>
+                        <td><textarea name="" id="" cols="10" rows="1"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td><textarea name="" id="" cols="10" rows="1"></textarea></td>
+                        <td><textarea name="" id="" cols="10" rows="1"></textarea></td>
+                        <td><textarea name="" id="" cols="10" rows="1"></textarea></td>
+                        <td><textarea name="" id="" cols="10" rows="1"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td><textarea name="" id="" cols="10" rows="1"></textarea></td>
+                        <td><textarea name="" id="" cols="10" rows="1"></textarea></td>
+                        <td><textarea name="" id="" cols="10" rows="1"></textarea></td>
+                        <td><textarea name="" id="" cols="10" rows="1"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td><textarea name="" id="" cols="10" rows="1"></textarea></td>
+                        <td><textarea name="" id="" cols="10" rows="1"></textarea></td>
+                        <td><textarea name="" id="" cols="10" rows="1"></textarea></td>
+                        <td><textarea name="" id="" cols="10" rows="1"></textarea></td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+        <div>
+            <h3>c.Details of Departmental Seminars delivered outside Curriculum:</h3>
+            <p>(2 marks per seminar-maximum 2 seminars)</p>
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+        </div>
+        <div>
+            <h3>d. details of Serving as Class Representative:</h3>
+            <p>(2 marks per Semester-maximum 2 Semesters)</p>
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+        </div>
+        <div>
+            <h3>e. Professional Body Membership:</h3>
+            <p>(1 mark per membership:)</p>
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+        </div>
+        <div>
+            <h3>f. MOOCs Certifications:</h3>
+            <p>(2 marks per Certification)</p>
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+        </div>
+        <div>
+            <h3>g. Internship/Consultancy:</h3>
+            <p>(2 marks per Internship of 4 weeks)</p>
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+        </div>
+        <h2>C. Extracurricular Activites (Maximum 15 Marks)</h2>
+        <hr>
+        <p>[sports, Dance, Music, General Quiz, Short Film etc.]</p>
+        <h3>a. Outside the College</h3>
+        <section>&#8544;/&#8545 Prize Won (Indicate Individual Event/Group Event);</section>
+        <div>
+            <ol>
+                <li><textarea name="" id="" cols="30" rows="1"></textarea></li>
+                <li><textarea name="" id="" cols="30" rows="1"></textarea></li>
+                <li><textarea name="" id="" cols="30" rows="1"></textarea></li>
+                <li><textarea name="" id="" cols="30" rows="1"></textarea></li>
+            </ol>
+        </div>
+        <section>Participation </section>
+        <div>
+            <ol>
+                <li><textarea name="" id="" cols="30" rows="1"></textarea></li>
+                <li><textarea name="" id="" cols="30" rows="1"></textarea></li>
+                <li><textarea name="" id="" cols="30" rows="1"></textarea></li>
+                <li><textarea name="" id="" cols="30" rows="1"></textarea></li>
+            </ol>
+        </div>
+        <h3>b. Within the College</h3>
+        <section>I/II Prize Won (Indicate Individual Event/Group Event) </section>
+        <div>
+            <ol>
+                <li><textarea name="" id="" cols="30" rows="1"></textarea></li>
+                <li><textarea name="" id="" cols="30" rows="1"></textarea></li>
+                <li><textarea name="" id="" cols="30" rows="1"></textarea></li>
+                <li><textarea name="" id="" cols="30" rows="1"></textarea></li>
+            </ol>
+        </div>
+        <h3>c. Tech Fest Coordinator:</h3>
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+        <h3>d. Any other Coordinator:</h3>
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+        <h3>
+            e. Committee Member:</h3>
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+        <h3>f. Participation in NSS/Other Social Service Activity:</h3>
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+
+        <h2>D. Give details of any other significant contributions:</h2>
+        <hr>
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+
+        <h2 for="declaration">DECLARATION</h2>
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+        <div>
+            <label for="">Place:</label>
+            <input type="text">
+        </div>
+        <div>
+            <label for="">Date:</label>
+            <input type="Date">
+        </div>
+        <button type="reset">submit</button>
+
+
+
+
+
+
+
+    </form>
+</body>
+
+</html>
